@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Savora - a restaurant landing page built with HTML, CSS and pure JavaScript">
+  <meta name="keywords" content="HTML, CSS, Pure JavaScript, restaurant, project">
+  <title>Savora | Restaurant</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ SIDEBAR (Visit Us) ============ -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar" aria-label="Visit us">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close panel">&times;</button>
+    <a href="#Home" class="logo logo-center">Savora</a>
+    <div class="sidebar-img ph ph-sidebar"></div>
+    <h2>Visit Us</h2>
+    <ul class="info-list">
+      <li><span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span> Delicious City, London 9578, UK</li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span> Daily : 8.00 am to 10.00 pm</li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span> booking@restaurant.com</li>
+    </ul>
+    <a href="#Reservation" class="btn btn-gold sidebar-link">Booking Request</a>
+    <a href="tel:+201021080042" class="sidebar-phone">+20-102-108-0042</a>
+  </aside>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#Home" class="logo">Savora</a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="#Home" class="active">Home</a></li>
+          <li><a href="#AboutUs">About Us</a></li>
+          <li><a href="#OurStory">Our Story</a></li>
+          <li><a href="#SpecialDish">Special Dish</a></li>
+          <li><a href="#Menu">Menu</a></li>
+          <li><a href="#OurChefs">Our Chefs</a></li>
+          <li><a href="#ContactUs">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="sidebarOpen" aria-label="Open info panel">
+          <span></span><span></span><span></span>
+        </button>
+        <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HOME / SLIDER ============ -->
+  <section class="hero" id="Home">
+    <div class="slides" id="slides">
+      <div class="slide active ph ph-hero1">
+        <div class="slide-content">
+          <h6>DELIGHTFUL EXPERIENCE</h6>
+          <div class="separator"></div>
+          <h1>Flavors Inspired By <br>The Seasons</h1>
+          <p>Come with family &amp; feel the joy of mouthwatering food</p>
+          <a href="#Menu" class="btn btn-gold">VIEW OUR MENU</a>
+        </div>
+      </div>
+      <div class="slide ph ph-hero2">
+        <div class="slide-content">
+          <h6>AMAZING &amp; DELICIOUS</h6>
+          <div class="separator"></div>
+          <h1>Where Every Flavor <br>Tells A Story</h1>
+          <p>Come with family &amp; feel the joy of mouthwatering food</p>
+          <a href="#Menu" class="btn btn-gold">VIEW OUR MENU</a>
+        </div>
+      </div>
+      <div class="slide ph ph-hero3">
+        <div class="slide-content">
+          <h6>TRADITIONAL &amp; HYGIENE</h6>
+          <div class="separator"></div>
+          <h1>For The Love Of <br>Delicious Food</h1>
+          <p>Come with family &amp; feel the joy of mouthwatering food</p>
+          <a href="#Menu" class="btn btn-gold">VIEW OUR MENU</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="arrow prev" id="prev" aria-label="Previous slide">&#10094;</button>
+    <button class="arrow next" id="next" aria-label="Next slide">&#10095;</button>
+    <div class="dots" id="dots"></div>
+
+    <a href="#Reservation" class="book-badge" aria-label="Book a table">
+      <span class="book-ico"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8a2 2 0 0 0 2 2v8M7 3v6M11 3v6M11 9a2 2 0 0 1-2 2M17 21V3c-2 1-3.5 3.5-3.5 7 0 2 1 3 3.5 3"/></svg></span>
+      BOOK A <br>TABLE
+    </a>
+  </section>
+
+  <!-- ============ ABOUT US ============ -->
+  <section class="section about" id="AboutUs">
+    <div class="container">
+      <div class="title reveal">
+        <h6>FLAVORS FOR ROYALTY</h6>
+        <div class="separator"></div>
+        <h2>We Offer Top Notch</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-img ph ph-breakfast"></div>
+          <h3>Breakfast</h3>
+          <a href="#Menu" class="link-btn" data-tab="breakfast">VIEW MENU</a>
+        </article>
+        <article class="card reveal">
+          <div class="card-img ph ph-appetizer"></div>
+          <h3>Appetizers</h3>
+          <a href="#Menu" class="link-btn" data-tab="lunch">VIEW MENU</a>
+        </article>
+        <article class="card reveal">
+          <div class="card-img ph ph-drinks"></div>
+          <h3>Drinks</h3>
+          <a href="#Menu" class="link-btn" data-tab="drinks">VIEW MENU</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR STORY ============ -->
+  <section class="section story" id="OurStory">
+    <div class="container story-grid">
+      <div class="story-text reveal">
+        <h6>OUR STORY</h6>
+        <div class="separator left"></div>
+        <h2>Every Flavor Tells <br>A Story</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into.</p>
+        <div class="story-actions">
+          <div class="call">
+            <span class="call-ico">&#9742;</span>
+            <div>
+              <small>Book Through Call</small>
+              <a href="tel:+201021080042">+20-102-108-0042</a>
+            </div>
+          </div>
+          <a href="#OurChefs" class="btn btn-outline">Read More</a>
+        </div>
+      </div>
+
+      <div class="story-images reveal">
+        <div class="story-img ph ph-story1"></div>
+        <div class="story-img ph ph-story2"></div>
+        <div class="badge badge-one"><span>25</span>Years of<br>Experience</div>
+        <div class="badge badge-two">&#9733; Delicious<br>Product</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECIAL DISH ============ -->
+  <section class="section special" id="SpecialDish">
+    <div class="container special-grid">
+      <div class="special-img reveal">
+        <div class="plate ph ph-plate"></div>
+      </div>
+      <div class="special-text reveal">
+        <h6>SPECIAL DISH</h6>
+        <div class="separator left"></div>
+        <h2>Lobster Tortellini</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type.</p>
+        <div class="price"><del>$40.00</del><strong>$20.00</strong></div>
+        <a href="#Menu" class="btn btn-gold">VIEW ALL MENU</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="section menu" id="Menu">
+    <div class="container">
+      <div class="title reveal">
+        <h6>SPECIAL SELECTION</h6>
+        <div class="separator"></div>
+        <h2>Delicious Menu</h2>
+      </div>
+
+      <ul class="tabs" id="tabs" role="tablist">
+        <li><button class="tab active" data-tab="breakfast" role="tab">BreakFast</button></li>
+        <li><button class="tab" data-tab="lunch" role="tab">Lunch</button></li>
+        <li><button class="tab" data-tab="dinner" role="tab">Dinner</button></li>
+        <li><button class="tab" data-tab="drinks" role="tab">Drinks</button></li>
+      </ul>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ CHEFS ============ -->
+  <section class="section chefs" id="OurChefs">
+    <div class="container">
+      <div class="title reveal">
+        <h6>EXPERIENCED TEAM</h6>
+        <div class="separator"></div>
+        <h2>Meet Our Chef</h2>
+      </div>
+
+      <div class="chef-grid">
+        <article class="chef reveal">
+          <div class="chef-img ph ph-chef1">
+            <ul class="social">
+              <li><a href="#" aria-label="Facebook">f</a></li>
+              <li><a href="#" aria-label="Twitter">t</a></li>
+              <li><a href="#" aria-label="Instagram">i</a></li>
+              <li><a href="#" aria-label="LinkedIn">in</a></li>
+            </ul>
+          </div>
+          <h4>Willium Joe</h4>
+          <span>MASTER CHEF</span>
+          <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+        </article>
+        <article class="chef reveal">
+          <div class="chef-img ph ph-chef2">
+            <ul class="social">
+              <li><a href="#" aria-label="Facebook">f</a></li>
+              <li><a href="#" aria-label="Twitter">t</a></li>
+              <li><a href="#" aria-label="Instagram">i</a></li>
+              <li><a href="#" aria-label="LinkedIn">in</a></li>
+            </ul>
+          </div>
+          <h4>Steave Den</h4>
+          <span>MASTER CHEF</span>
+          <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+        </article>
+        <article class="chef reveal">
+          <div class="chef-img ph ph-chef3">
+            <ul class="social">
+              <li><a href="#" aria-label="Facebook">f</a></li>
+              <li><a href="#" aria-label="Twitter">t</a></li>
+              <li><a href="#" aria-label="Instagram">i</a></li>
+              <li><a href="#" aria-label="LinkedIn">in</a></li>
+            </ul>
+          </div>
+          <h4>Oliver Joe</h4>
+          <span>MASTER CHEF</span>
+          <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESERVATION ============ -->
+  <section class="section reservation" id="Reservation">
+    <div class="container reservation-grid">
+      <div class="reservation-text reveal">
+        <h6>RESERVATION</h6>
+        <div class="separator left"></div>
+        <h2>Book A Table</h2>
+        <p>Restaurant will be open for all days, Sunday night will be closed. All booking payment is secured with credit card, no charges will be apply for online booking. No refundable.</p>
+        <p class="booking-call">Booking request <a href="tel:+201021080042">+20-102-108-0042</a> or fill out the order form</p>
+      </div>
+
+      <form class="booking-form reveal" id="bookingForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <small class="error"></small>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <select id="guests" name="guests" required>
+              <option value="">Number of Guests</option>
+              <option>1 Person</option><option>2 People</option><option>3 People</option>
+              <option>4 People</option><option>5 People</option><option>6+ People</option>
+            </select>
+            <small class="error"></small>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <input type="date" id="date" name="date" required>
+            <small class="error"></small>
+          </div>
+          <div class="field">
+            <input type="time" id="time" name="time" required>
+            <small class="error"></small>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-gold btn-block">Book A Table</button>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER / CONTACT ============ -->
+  <footer class="footer" id="ContactUs">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="#Home" class="logo">Savora</a>
+          <ul class="info-list">
+            <li><span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span> Delicious City, London 9578, UK</li>
+            <li><span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span> Daily : 8.00 am to 10.00 pm</li>
+            <li><span class="ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span> booking@restaurant.com</li>
+          </ul>
+          <ul class="social social-footer">
+            <li><a href="#" aria-label="Facebook">f</a></li>
+            <li><a href="#" aria-label="Twitter">t</a></li>
+            <li><a href="#" aria-label="Instagram">i</a></li>
+          </ul>
+        </div>
+
+        <form class="footer-col contact-form" id="contactForm" novalidate>
+          <h5>Send Us A Message</h5>
+          <input type="text" id="cname" placeholder="Your Name" required>
+          <input type="email" id="cemail" placeholder="Your Email" required>
+          <textarea id="cmsg" rows="3" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn-gold">Send Message</button>
+          <p class="form-msg" id="contactMsg" role="status"></p>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> Restaurant. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
